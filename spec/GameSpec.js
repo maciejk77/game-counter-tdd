@@ -66,5 +66,51 @@ describe('Game', function() {
     expect(game.noOfD).toEqual(7);
   });
 
-})
+  it('calculates and stores total score for random game => 455 points', function() {
+    random();
+    expect(game.score).toEqual(455);
+  });
+
+  it('calculates and stores total bonus 3xA, 4xB => 110 points', function() { 
+    for(var i = 0; i < 3; i++) { game.addLetter('A') };
+    for(var i = 0; i < 4; i++) { game.addLetter('B') };
+    expect(game.bonus).toEqual(110);
+  });
+
+  it('calculates and stores bonus for 5A items => 50 points', function() {
+    for(var i = 0; i < 5; i++) { game.addLetter('A') };
+    expect(game.bonus).toEqual(50);
+  });
+
+  it('calculates and stores bonus for 5B items => 60 points', function() {
+    for(var i = 0; i < 5; i++) { game.addLetter('B') };
+    expect(game.bonus).toEqual(60);
+  });
+
+  it('resets counters when new game button is pressed', function() {
+    game.reset();
+    expect(game.score).toEqual(0);
+    expect(game.noOfA).toEqual(0);
+    expect(game.noOfB).toEqual(0);
+    expect(game.noOfC).toEqual(0);
+    expect(game.noOfD).toEqual(0);
+    expect(game.totalPointsA).toEqual(0);
+    expect(game.totalPointsB).toEqual(0);
+    expect(game.bonus).toEqual(0);
+  });
+
+  function random() {
+    game.addLetter('A');
+    game.addLetter('B');
+    game.addLetter('A');
+    game.addLetter('B');
+    game.addLetter('C');
+    game.addLetter('A');
+    game.addLetter('B');
+    game.addLetter('C');
+    game.addLetter('C');
+    game.addLetter('B');
+    game.addLetter('D');
+  }
+});
 
