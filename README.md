@@ -9,3 +9,6 @@ Fully test driven (**TDD**) in **Jasmine**.
 ####Preview
 
 ![flickr-search screenshot](https://github.com/maciejk77/game-counter-tdd/blob/master/img/screenshot.png?raw=true)
+
+####To be completed:
+Front end (UI)
