@@ -12,3 +12,4 @@ Fully test driven (**TDD**) in **Jasmine**.
 
 ####To be completed:
 Front end (UI)
+Game counter rules of calculation in README.md
