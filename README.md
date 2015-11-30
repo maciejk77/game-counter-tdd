@@ -11,5 +11,5 @@ Fully test driven (**TDD**) in **Jasmine**.
 ![flickr-search screenshot](https://github.com/maciejk77/game-counter-tdd/blob/master/img/screenshot.png?raw=true)
 
 ####To be completed:
-Front end (UI)
-Game counter rules of calculation in README.md
+- Front end (UI)
+- Game counter rules of calculation in README.md
